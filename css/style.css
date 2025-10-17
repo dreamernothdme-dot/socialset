@@ -1,0 +1,177 @@
+/* фон страницы */
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(145deg, #1e3c72, #2a5298, #6a11cb, #8e2de2);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  font-family: 'Poppins', sans-serif;
+}
+
+@keyframes gradientAnimation {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* табло профиля слева */
+.profile {
+  position: fixed;
+  top: 10%;
+  left: 0;
+  transform: translateY(0);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  padding: 50px 35px;
+  border-radius: 0 35px 35px 0;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0,0,0,0.35);
+  color: white;
+  width: 570px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* аватарка */
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  margin-bottom: 15px;
+  transition: transform 0.3s;
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+}
+
+/* имя и никнейм */
+.name {
+  font-size: 26px;
+  margin: 10px 0 5px 0;
+}
+
+.username {
+  font-size: 16px;
+  opacity: 0.8;
+  margin-bottom: 15px;
+}
+
+/* биография */
+.bio {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+/* кнопки */
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.sub,
+.addfr,
+.action-btn {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/* кнопка "Подписаться" */
+.sub {
+  background-color: #6a11cb;
+  color: white;
+}
+.sub:hover {
+  background-color: #8e2de2;
+  transform: scale(1.05);
+}
+
+/* кнопка "Добавить в друзья" */
+.addfr {
+  background-color: #1e90ff;
+  color: white;
+}
+.addfr:hover {
+  background-color: #63b3ff;
+  transform: scale(1.05);
+}
+
+/* кнопка "Редактировать профиль" */
+.action-btn {
+  background-color: #6a11cb;
+  color: white;
+  margin-top: 20px;
+}
+.action-btn:hover {
+  background-color: #8e2de2;
+  transform: scale(1.05);
+}
+
+/* блок социальных ссылок */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.social-link img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.social-link:hover img {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+  cursor: pointer;
+}
+
+/* блок интересов */
+.interests {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0 25px 0;
+  padding: 0;
+}
+
+.interests li {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  opacity: 0.9;
+  transition: all 0.3s;
+  cursor: default;
+}
+
+.interests li:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+  transform: scale(1.05);
+}
+
+/* статистика */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.stats span {
+  font-size: 14px;
+}

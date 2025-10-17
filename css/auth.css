@@ -1,0 +1,105 @@
+/* Фон страницы */
+body {
+   background: linear-gradient(145deg, #1e3c72, #2a5298, #6a11cb, #8e2de2);
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Блок для формы */
+.form-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Форма регистрации / входа */
+.register {
+  width: 400px;
+  padding: 25px;
+  background: linear-gradient(135deg, #1c1b1b, #0c0c0c, #1ccbcb, #186c6c);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  color: white;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Анимация появления формы */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Заголовок формы */
+.register h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Метки полей */
+.register label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Поля ввода */
+.register input[type="text"],
+.register input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Hover для текстовых полей */
+.register input[type="text"]:hover,
+.register input[type="password"]:hover {
+  background-color: rgba(230, 230, 230, 0.9);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Кнопка отправки формы */
+.register input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #111;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/* Hover для кнопки */
+.register input[type="submit"]:hover {
+  background-color: #2e312e;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Ссылки под формой */
+.form-block p {
+  margin-top: 10px;
+  color: white;
+}
+
+.form-block a {
+  color: #00ffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.form-block a:hover {
+  color: #ffffff;
+}
